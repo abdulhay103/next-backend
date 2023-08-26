@@ -9,6 +9,6 @@ export async function POST(req, res) {
       { name: "abdul Hay", age: 28, color: "Black" },
       { name: "abdul Hay", age: 28, color: "Black" },
     ],
-    { status: 202 }
+    { status: 202, headers: { token: "XYZ-123-ABC" } }
   );
 }
