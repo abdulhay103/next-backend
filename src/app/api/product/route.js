@@ -2,6 +2,10 @@ import { NextResponse } from "next/server";
 
 //POST method
 export async function POST(req, res) {
-  let myCookie = req.cookies.get("myCookie");
-  return NextResponse.json({ Cookie: myCookie });
+  return NextResponse.json([
+    { name: "abdul Hay", age: 28, color: "Black" },
+    { name: "abdul Hay", age: 28, color: "Black" },
+    { name: "abdul Hay", age: 28, color: "Black" },
+    { name: "abdul Hay", age: 28, color: "Black" },
+  ]);
 }
