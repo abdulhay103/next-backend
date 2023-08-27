@@ -1,6 +1,14 @@
-import { redirect } from "next/navigation";
+import { NextResponse } from "next/server";
+import { headers } from "next/headers";
 
 //GET method
 export async function GET(req, res) {
-  redirect("/");
+  const headerList = headers();
+  let productName = headerList.get("Brand");
+  let productOrigin = headerList.get("Origin");
+
+  return NextResponse.json({
+    ProductName: productName,
+    productOrigin: productOrigin,
+  });
 }
