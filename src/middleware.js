@@ -5,13 +5,12 @@ export function middleware(req, res) {
     const reqHeader = new Headers(req.headers);
     let token = reqHeader.get("token");
     if (token === "123-ABC") {
-      reqHeader.set("Brand", "Samsung");
-      reqHeader.set("Origin", "Vietnum");
-      return NextResponse.next({
-        request: {
-          headers: reqHeader,
-        },
-      });
+      const response = NextResponse.next();
+      response.headers.set(
+        "Set-Cookie",
+        "session=Response Cookie; path=/; httpOnly"
+      );
+      return response;
     } else {
       return NextResponse.json({}, { status: 401 });
     }
