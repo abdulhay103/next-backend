@@ -1,8 +1,8 @@
 export default function page() {
   return (
     <main>
-      <h1>Home Page</h1>
-      <h1>Test Page</h1>
+      <h1>Set Cookie By clicking the button bellow</h1>
+      <button>ok</button>
     </main>
   );
 }
