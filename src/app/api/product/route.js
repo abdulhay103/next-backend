@@ -1,14 +1,17 @@
 import { NextResponse } from "next/server";
-import { headers } from "next/headers";
 
-//GET method
-export async function GET(req, res) {
-  const headerList = headers();
-  let productName = headerList.get("Brand");
-  let productOrigin = headerList.get("Origin");
-
-  return NextResponse.json({
-    ProductName: productName,
-    productOrigin: productOrigin,
-  });
+//POST method
+export async function POST(req, res) {
+  return NextResponse.json(
+    [
+      { name: "abdul Hay", age: 28, color: "Black" },
+      { name: "abdul Hay", age: 28, color: "Black" },
+      { name: "abdul Hay", age: 28, color: "Black" },
+      { name: "abdul Hay", age: 28, color: "Black" },
+    ],
+    {
+      status: 202,
+      headers: { "Set-Cookie": "Theme=Dark; path=/;httpOnly=true" },
+    }
+  );
 }

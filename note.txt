@@ -1,0 +1,7 @@
+
+
+1. JSON Response url is : http://localhost:3000/api/jsonResponse
+2. Set Cookie route Url is : http://localhost:3000/api/product
+3. Read Cookie route url is : http://localhost:3000/api/cookie
+4. Header Modification url is : http://localhost:3000/api/headerModify
+5. Redirect url is : http://localhost:3000/api/redirect
